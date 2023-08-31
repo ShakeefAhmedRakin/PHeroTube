@@ -1,0 +1,14 @@
+MAIN
+----
+
+Navigation bar with blog links to another html with answer to question.
+Tab buttons with dynamic name with active color.
+Cards corresponding to tabs with dynamic tick mark.
+
+BONUS
+-----
+
+Make sort by view button functional (descending order)
+Show upload time on card ( Some have it, some don't ) [in second in API]
+Responsive for tablet and mobile(ONE CARD AT A TIME)
+
