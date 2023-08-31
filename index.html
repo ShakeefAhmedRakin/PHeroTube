@@ -67,34 +67,77 @@
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <button class="btn bg-btnbg hover:bg-btnbg rounded-md btn-sort">
+              <button
+                class="btn bg-btnbg hover:bg-btnbg rounded-md text-lg font-medium btn-sort normal-case"
+              >
                 Sort by view
               </button>
+            </ul>
           </div>
           <!-- LOGO -->
           <div class="w-full">
-            <a class="btn btn-ghost normal-case text-xl min-w-[150px]"
-              ><img src="Logo.png" alt="logo" class=""
-            /></a>
+            <a class="btn btn-ghost min-w-[150px]"
+              ><img src="Logo.png" alt="logo" />
+            </a>
           </div>
         </div>
         <div class="navbar-center hidden md:flex">
-          <button class="btn bg-btnbg hover:bg-btnbg rounded-md btn-sort">
+          <button
+            class="btn bg-btnbg hover:bg-btnbg rounded-md text-lg font-medium btn-sort normal-case"
+          >
             Sort by view
           </button>
         </div>
         <div class="navbar-end">
           <a
-            class="btn bg-primarycolor hover:bg-primarycolor text-white rounded-md" id="btn-blog"
-            >BLOG</a
+            class="btn bg-primarycolor hover:bg-primarycolor text-white rounded-md text-lg font-medium normal-case"
+            id="btn-blog"
+            >Blog</a
           >
         </div>
       </div>
-      <hr class="border-[1px]">
+      <hr class="border-[1px]" />
       <!-- NAVIGATION BAR END -->
     </header>
     <!-- HEADER ENDS -->
-    <main></main>
-    <footer></footer>
+    <!-- MAIN STARTS -->
+    <main class="md:container md:mx-auto px-2 md:px-4 lg:px-16">
+      <!-- CATEGORY SECTION STARTS -->
+      <section class="flex justify-center">
+        <div
+          id="category-container"
+          class="flex justify-start gap-x-4 md:gap-x-6 overflow-x-auto py-8"
+        >
+          <button
+            class="btn normal-case font-medium text-lg bg-primarycolor text-white hover:bg-primarycolor"
+          >
+            All
+          </button>
+          <button
+            class="btn normal-case font-medium text-lg bg-btnbg text-black hover:bg-btnbg"
+          >
+            Music
+          </button>
+          <button
+            class="btn normal-case font-medium text-lg bg-btnbg text-black hover:bg-btnbg"
+          >
+            Comedy
+          </button>
+
+          <button
+            class="btn normal-case font-medium text-lg bg-btnbg text-black hover:bg-btnbg"
+          >
+            Drawing
+          </button>
+        </div>
+      </section>
+      <!-- CATEGORY SECTION ENDS -->
+      <!-- VIDEO SECTION STARTS -->
+      <section>
+        <div></div>
+      </section>
+      <!-- VIDEO SECTION ENDS -->
+    </main>
+    <!-- MAIN ENDS -->
   </body>
 </html>
