@@ -131,7 +131,7 @@ const displayVideo = (videoData) => {
                 <div class="flex justify-center items-center">
                 <img src="${
                   videoData?.authors[0]?.verified
-                    ? "icons8-verified-50.png"
+                    ? "images/icons8-verified-50.png"
                     : ""
                 }" class="w-4 h-4" />
                 </div>

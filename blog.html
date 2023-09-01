@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHeroTube - Blog</title>
+    <link rel="shortcut icon" href="images/fav.JPG" type="image/x-icon" />
 
     <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,7 +49,7 @@
           <!-- LOGO -->
           <div class="w-full">
             <a class="btn btn-ghost min-w-[150px]" href="index.html"
-              ><img src="Logo.png" alt="logo" />
+              ><img src="images/Logo.png" alt="logo" />
             </a>
           </div>
         </div>
@@ -83,15 +84,37 @@
             class="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div class="collapse-title text-base md:text-xl font-semibold">
-              Discuss the scope of var, let, and const
+              Discuss the scope of
+              <span class="text-primarycolor">var</span>,
+              <span class="text-primarycolor">let</span> and
+              <span class="text-primarycolor">const</span>
             </div>
-            <div class="collapse-content">
-              <p class="ml-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                facere, vero, obcaecati vel mollitia id voluptates dolore,
-                laboriosam voluptatibus porro itaque provident at? Deserunt
-                obcaecati aperiam accusamus voluptate, illum aspernatur.
-              </p>
+            <div class="collapse-content mx-2">
+              <div
+                class="text-gray-600 font-medium space-y-2 text-sm md:text-base"
+              >
+                <p>
+                  <span class="text-primarycolor">var</span> has a scope that is
+                  limited to it's parent function which also includes the global
+                  function. So, although they are enclosed within their
+                  functions, they are not enclosed within blocks of code like
+                  'if', 'while' or 'for' which can lead to issues due to their
+                  function-level scope. Furthermore, they get hoisted to their
+                  parent function but they are initialized with 'undefined'.
+                </p>
+
+                <p>
+                  <span class="text-primarycolor">let</span> and
+                  <span class="text-primarycolor">const</span> have a scope
+                  which is block based which includes they are scoped within
+                  their respective blocks which can be 'if', 'while', 'for' or
+                  functions. The main difference between them is that const
+                  cannot be reassigned. Both of them get hoisted to the top of
+                  their block just like 'var' but they do not get initialized.
+                  So, accessing them before their declarations results in a
+                  `ReferenceError`.
+                </p>
+              </div>
             </div>
           </div>
           <hr class="border-[1px]" />
@@ -102,15 +125,61 @@
             class="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div class="collapse-title text-base md:text-xl font-semibold">
-              Tell us the use cases of null and undefined
+              Tell us the use cases of
+              <span class="text-primarycolor">null</span> and
+              <span class="text-primarycolor">undefined</span>
             </div>
-            <div class="collapse-content">
-              <p class="ml-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                facere, vero, obcaecati vel mollitia id voluptates dolore,
-                laboriosam voluptatibus porro itaque provident at? Deserunt
-                obcaecati aperiam accusamus voluptate, illum aspernatur.
-              </p>
+            <div class="collapse-content mx-2">
+              <div
+                class="text-gray-600 font-medium space-y-2 text-sm md:text-base"
+              >
+                <!-- NULL -->
+                <p>Use cases for <span class="text-primarycolor">null</span></p>
+                <ol class="list-disc">
+                  <li class="ml-8">
+                    You can initialize a variable with 'null' to indicate that
+                    it has no value or it will be assigned one soon.
+                  </li>
+                  <li class="ml-8">
+                    In arrays, you can use null as a placeholder for empty
+                    slots, specifically for fixed-sized arrays.
+                  </li>
+                  <li class="ml-8">
+                    In arrays, you can use null as a placeholder for empty
+                    slots, specifically for fixed-sized arrays.
+                  </li>
+                  <li class="ml-8">
+                    You can use null as a default value for function parameters
+                    when you want to handle non-given arguments.
+                  </li>
+                </ol>
+                <!-- UNDEFINED -->
+                <p>
+                  Use cases for <span class="text-primarycolor">undefined</span>
+                </p>
+                <ol class="list-disc">
+                  <li class="ml-8">
+                    You can initialize a variable with 'undefined' to indicate
+                    that it has no value or it will be assigned one soon. This
+                    happens by default, if nothing is assigned to a variable.
+                  </li>
+                  <li class="ml-8">
+                    You can use 'undefined' to check if a variable has been
+                    initialized or not. If a variable is still undefined, it is
+                    initialized but doesn't have a value assigned.
+                  </li>
+                  <li class="ml-8">
+                    You can check whether an object has a property or not. If it
+                    doesn't exist , it will return 'undefined' when accessed.
+                  </li>
+                  <li class="ml-8">
+                    You can check whether a function has been given all the
+                    arguments because when a function is called with fewer
+                    arguments than expected, the missing arguments are
+                    automatically assigned the value 'undefined'.
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
           <hr class="border-[1px]" />
@@ -121,15 +190,26 @@
             class="collapse collapse-arrow border border-base-300 bg-base-200"
           >
             <div class="collapse-title text-base md:text-xl font-semibold">
-              What do you mean by REST API?
+              What do you mean by
+              <span class="text-primarycolor">REST API</span>?
             </div>
-            <div class="collapse-content">
-              <p class="ml-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                facere, vero, obcaecati vel mollitia id voluptates dolore,
-                laboriosam voluptatibus porro itaque provident at? Deserunt
-                obcaecati aperiam accusamus voluptate, illum aspernatur.
-              </p>
+            <div class="collapse-content mx-2">
+              <div
+                class="text-gray-600 font-medium space-y-2 text-sm md:text-base"
+              >
+                <p>
+                  It stands for
+                  <span class="text-primarycolor"
+                    >Representational State Transfer Application Programming
+                    Interface</span
+                  >. It is a set of guidelines and rules for designing networked
+                  applications that require communication between clients and
+                  servers. It relies on standard HTTP methods like GET, POST,
+                  PUT and DELETE. Furthermore, it emphasizes using URLs to
+                  represent resources. It is designed to be simple, scalable,
+                  and stateless.
+                </p>
+              </div>
             </div>
           </div>
           <hr class="border-[1px]" />
