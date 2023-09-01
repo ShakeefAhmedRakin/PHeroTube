@@ -83,12 +83,10 @@ const storeVideoInCache = async (category_id) => {
     videoContainer.classList.add("hidden");
     videoContainer.classList.remove("flex");
   }
-  console.log(videoCache);
 };
 
 // DISPLAY A SINGLE VIDEO DATA.
 const displayVideo = (videoData) => {
-  console.log(videoData.others.posted_date);
   videoContainer.innerHTML += `<a href="#">
         <div class="w-full space-y-5">
           <!-- THUMBNAIL -->
@@ -156,5 +154,26 @@ const secondsToTime = (seconds) => {
   let minutes = Math.floor((seconds % 3600) / 60);
   return `${hours} hrs ${minutes} min ago`;
 };
+
+// SORT BY VIEWS FUNCTION
+const sortByViews = () => {
+  if (videoCache.length > 0) {
+    // CLEARING CONTAINER
+    videoContainer.innerHTML = "";
+    videoContainer.classList.remove("hidden");
+    videoContainer.classList.add("flex");
+    videoCache.sort(
+      (a, b) => parseInt(b.others.views) - parseInt(a.others.views)
+    );
+    videoCache.forEach((videoData) => {
+      displayVideo(videoData);
+    });
+  }
+};
+
+// ADDING SORT BY VIEW FUNCTION TO BUTTON
+const sortButtons = document.getElementsByClassName("btn-sort");
+sortButtons[0].addEventListener("click", sortByViews);
+sortButtons[1].addEventListener("click", sortByViews);
 
 fetchCategory();
