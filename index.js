@@ -99,7 +99,9 @@ const displayVideo = (videoData) => {
             />
             <!-- TAG -->
             <span
-              class="bg-[#171717] text-white text-[10px] p-1 rounded-md absolute right-1 bottom-1"
+              class="bg-[#171717] text-white text-[10px] p-1 rounded-md absolute right-1 bottom-1 ${
+                !videoData?.others?.posted_date ? "hidden" : ""
+              }"
               >${
                 videoData?.others?.posted_date
                   ? secondsToTime(videoData?.others?.posted_date)
@@ -129,11 +131,13 @@ const displayVideo = (videoData) => {
                   videoData?.authors[0]?.profile_name
                 }</p>
                 <div class="flex justify-center items-center">
-                <img src="${
+                <img alt="" src="${
                   videoData?.authors[0]?.verified
                     ? "images/icons8-verified-50.png"
                     : ""
-                }" class="w-4 h-4" />
+                }" class="w-4 h-4 ${
+    !videoData?.authors[0]?.verified ? "hidden" : ""
+  }" />
                 </div>
               </div>
               <!-- VIEWS -->
