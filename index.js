@@ -95,7 +95,7 @@ const displayVideo = (videoData) => {
             <img
               src="${videoData?.thumbnail}"
               alt="thumb"
-              class="rounded-xl w-full h-48 object-cover"
+              class="rounded-xl w-full aspect-video object-cover"
             />
             <!-- TAG -->
             <span
